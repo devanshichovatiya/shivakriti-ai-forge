@@ -7,6 +7,8 @@ interface Particle {
   y: number;
   opacity: number;
   scale: number;
+  velocityX: number;
+  velocityY: number;
 }
 
 export const SmokeCursor = () => {
@@ -17,35 +19,41 @@ export const SmokeCursor = () => {
     const handleMouseMove = (e: MouseEvent) => {
       setMousePos({ x: e.clientX, y: e.clientY });
 
-      // Create smoke particles
-      const newParticle: Particle = {
-        id: Date.now() + Math.random(),
-        x: e.clientX,
-        y: e.clientY,
-        opacity: 1,
-        scale: Math.random() * 0.5 + 0.5,
-      };
+      // Create multiple smoke particles per movement
+      for (let i = 0; i < 3; i++) {
+        const newParticle: Particle = {
+          id: Date.now() + Math.random() + i,
+          x: e.clientX + (Math.random() - 0.5) * 20,
+          y: e.clientY + (Math.random() - 0.5) * 20,
+          opacity: 1,
+          scale: Math.random() * 1.5 + 0.8,
+          velocityX: (Math.random() - 0.5) * 2,
+          velocityY: -Math.random() * 3 - 1,
+        };
 
-      setParticles((prev) => [...prev, newParticle].slice(-15));
+        setParticles((prev) => [...prev, newParticle].slice(-40));
+      }
     };
 
     window.addEventListener('mousemove', handleMouseMove);
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
 
-  // Fade out particles
+  // Fade out and animate particles
   useEffect(() => {
     const interval = setInterval(() => {
       setParticles((prev) =>
         prev
           .map((p) => ({
             ...p,
-            opacity: p.opacity - 0.05,
-            y: p.y - 1,
+            opacity: p.opacity - 0.03,
+            y: p.y + p.velocityY,
+            x: p.x + p.velocityX,
+            scale: p.scale + 0.05,
           }))
           .filter((p) => p.opacity > 0)
       );
-    }, 50);
+    }, 30);
 
     return () => clearInterval(interval);
   }, []);
@@ -86,14 +94,15 @@ export const SmokeCursor = () => {
       {particles.map((particle) => (
         <div
           key={particle.id}
-          className="fixed top-0 left-0 w-8 h-8 rounded-full pointer-events-none z-[9998]"
+          className="fixed top-0 left-0 w-16 h-16 rounded-full pointer-events-none z-[9998]"
           style={{
-            left: particle.x - 16,
-            top: particle.y - 16,
-            opacity: particle.opacity * 0.3,
+            left: particle.x - 32,
+            top: particle.y - 32,
+            opacity: particle.opacity * 0.6,
             transform: `scale(${particle.scale})`,
-            background: 'radial-gradient(circle, rgba(147, 51, 234, 0.4) 0%, transparent 70%)',
-            filter: 'blur(8px)',
+            background: `radial-gradient(circle, rgba(147, 51, 234, ${0.6 * particle.opacity}) 0%, rgba(192, 132, 252, ${0.3 * particle.opacity}) 40%, transparent 70%)`,
+            filter: 'blur(12px)',
+            boxShadow: `0 0 30px rgba(147, 51, 234, ${0.4 * particle.opacity})`,
           }}
         />
       ))}
