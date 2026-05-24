@@ -1,29 +1,38 @@
-import { Toaster } from "@/components/ui/toaster";
-import { Toaster as Sonner } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Index from "./pages/Index";
-import Blog from "./pages/Blog";
-import NotFound from "./pages/NotFound";
+import { HelmetProvider } from 'react-helmet-async';
+import { Button } from './components/ui/button';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import Index from './pages/Index';
+import NotFound from './pages/NotFound';
+import Chatbot from './components/Chatbot';
+import SmokeyCursor from './components/lightswind/smokey-cursor';
+import Blog from './pages/Blog';
+import BlogPost from './pages/BlogPost';
+import Privacy from './pages/Privacy';
+import Terms from './pages/Terms';
+import Sitemap from './pages/Sitemap';
+import ScrollToTop from './components/hooks/use-scroll-to-top';
 
-const queryClient = new QueryClient();
+function App() {
+  const helmetContext = {};
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
+  return (
+    <HelmetProvider context={helmetContext}>
+      <SmokeyCursor />
+      <Router>
+        <ScrollToTop />
+        {/* <Chatbot /> */}
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/blog" element={<Blog />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="/blog/:id" element={<BlogPost />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/terms" element={<Terms />} />
+          <Route path="/sitemap" element={<Sitemap />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
+      </Router>
+    </HelmetProvider>
+  );
+}
 
 export default App;

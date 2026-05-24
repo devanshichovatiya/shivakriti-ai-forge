@@ -1,0 +1,17 @@
+Shivakriti Tech - AI Solutions & Premium Software Development
+
+About Us:
+The Shivakriti Philosophy: In an era of rapid commoditization, quality is the only differentiator. Shivakriti Tech was founded on the principle that technology should be as beautiful as it is functional. From Vadodara to the global stage, we deliver engineering precision wrapped in world-class aesthetics. Whether it's Generative AI or complex ERP systems, we bring a level of craft that is rare in the industry. We have over 5 years of excellence and prioritize clean code and high velocity.
+
+Our Services:
+- Intelligent Automation: Reduce operational overhead with self-healing workflows.
+- Generative AI: Custom LLM integration for enterprise knowledge bases.
+- Web Platforms: High-performance React & Next.js architectures.
+- Software Engineering: Scalable backend systems built for millions of users.
+- Cloud Infrastructure: AWS/GCP solutions designed for resilience.
+- IoT Connectivity: Smart device networks and edge computing.
+
+Contact Information:
+- Email: contact@shivakriti.in
+- Phone: +91 94267 82442
+- Location: Vadodara, Gujarat, India

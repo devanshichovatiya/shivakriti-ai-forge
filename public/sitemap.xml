@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<url>
+  <loc>https://www.shivakriti.in/</loc>
+  <lastmod>2025-12-10T00:00:00+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://www.shivakriti.in/blog</loc>
+  <lastmod>2025-12-10T00:00:00+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.shivakriti.in/blog/1</loc>
+  <lastmod>2025-12-10T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.shivakriti.in/blog/2</loc>
+  <lastmod>2025-12-10T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.shivakriti.in/blog/3</loc>
+  <lastmod>2025-12-10T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.shivakriti.in/blog/4</loc>
+  <lastmod>2025-12-10T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.shivakriti.in/blog/5</loc>
+  <lastmod>2025-12-10T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.shivakriti.in/blog/6</loc>
+  <lastmod>2025-12-10T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.shivakriti.in/blog/7</loc>
+  <lastmod>2025-12-10T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.shivakriti.in/blog/8</loc>
+  <lastmod>2025-12-10T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.shivakriti.in/blog/9</loc>
+  <lastmod>2025-12-10T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.shivakriti.in/blog/10</loc>
+  <lastmod>2025-12-10T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.shivakriti.in/privacy</loc>
+  <lastmod>2025-12-10T00:00:00+00:00</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.50</priority>
+</url>
+<url>
+  <loc>https://www.shivakriti.in/terms</loc>
+  <lastmod>2025-12-10T00:00:00+00:00</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.50</priority>
+</url>
+<url>
+  <loc>https://www.shivakriti.in/sitemap</loc>
+  <lastmod>2025-12-10T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.40</priority>
+</url>
+</urlset>

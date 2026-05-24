@@ -13,14 +13,14 @@ export const CaseStudies = () => {
       category: "Education",
       title: "EdTech Assistant",
       desc: "A 24/7 student companion that handles course enrollment, answers academic queries, and provides personalized learning path suggestions.",
-      stat: "40% ↓ Admin Queries",
+      stat: "75% ↓ Admin Queries",
       icon: GraduationCap
     },
     {
       category: "Customer Support",
       title: "SupportAI Pro",
       desc: "Efficient assistance for user inquiries. Automated L1 support resolution, intelligently routing complex issues to human agents.",
-      stat: "75% Instant Resolution",
+      stat: "63% Instant Resolution",
       icon: MessageSquare
     },
     {
@@ -41,14 +41,14 @@ export const CaseStudies = () => {
       category: "Technical Support",
       title: "TechResolv",
       desc: "Resolve issues quickly and effectively. Troubleshoots common software glitches and guides users through diagnostic steps.",
-      stat: "50% Lower Downtime",
+      stat: "90% Lower Downtime",
       icon: Wrench
     },
     {
       category: "E-commerce",
       title: "ShopRight Bot",
       desc: "Enhance shopping experiences seamlessly. Offers personalized product recommendations and assists with checkout and order tracking.",
-      stat: "25% ↑ Avg Order Value",
+      stat: "36% ↑ Avg Order Value",
       icon: ShoppingBag
     }
   ];
@@ -123,15 +123,15 @@ export const CaseStudies = () => {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <ul className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {activeData.map((study, index) => (
-            <div 
+            <li 
               key={index} 
               className="group relative p-8 bg-background border border-border rounded-3xl hover:border-primary/30 transition-all duration-300 hover:bg-card"
             >
-              <div className="absolute top-0 right-0 p-8 opacity-0 group-hover:opacity-100 transition-opacity">
+              {/* <div className="absolute top-0 right-0 p-8 opacity-0 group-hover:opacity-100 transition-opacity">
                 <ArrowUpRight className="text-primary" size={24} />
-              </div>
+              </div> */}
               
               <div className="w-12 h-12 rounded-2xl bg-foreground/5 border border-border flex items-center justify-center mb-8 text-primary group-hover:bg-primary group-hover:text-foreground transition-all">
                 <study.icon size={24} />
@@ -150,9 +150,9 @@ export const CaseStudies = () => {
                 <div className="text-2xl font-bold text-foreground">{study.stat.split(' ')[0]}</div>
                 <div className="text-xs text-muted-foreground uppercase tracking-wider">{study.stat.substring(study.stat.indexOf(' '))}</div>
               </div>
-            </div>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </section>
   );
